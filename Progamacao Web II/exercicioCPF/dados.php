@@ -29,9 +29,10 @@
             $d2=0;
         }
         echo "O seu CPF completo é:<br><br>";
-        echo $n1.$n2.$n3.".".$n4.$n5.$n6.".".$n7.$n8.$n9."-".$d1.$d2;
+        echo "<table border='1'><tr><td>$n1</td><td>$n2</td><td>$n3</td><td>.</td>
+            <td>$n4</td><td>$n5</td><td>$n6</td><td>.</td>
+            <td>$n7</td><td>$n8</td><td>$n9</td><td>-</td>
+            <td>$d1</td><td>$d2</td>";
+        echo "</table>";
     }
 ?>
-   
-
-
