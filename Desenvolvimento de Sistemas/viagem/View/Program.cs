@@ -23,11 +23,11 @@ namespace viagem
                 opcao = int.Parse(Console.ReadLine());
                 if (opcao == 1)
                 {
-                    Console.WriteLine("Informe\n Km percorrido");
+                    Console.WriteLine("Informe:\nKm percorrido");
                     km=int.Parse(Console.ReadLine());
                     percurso.setKmPercorrida(km);
 
-                    Console.WriteLine("Valor do combustível");
+                    Console.WriteLine("O valor do combustível");
                     combustivel = int.Parse(Console.ReadLine());
                     percurso.setValorCombustivel(combustivel);
 
