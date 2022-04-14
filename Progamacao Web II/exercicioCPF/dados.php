@@ -11,7 +11,7 @@
 
     if($n1=="" || $n2=="" || $n3=="" || $n4=="" || $n5=="" || $n6=="" || $n7=="" || $n8=="" || $n9=="")
     {
-        echo "Você não escreveu nada! Volte e faça novamente!<br>";
+        echo "Você não escreveu nada, clique no 'Voltar' e faça novamente!<br>";
         echo "<a href='formulario.html'>Voltar</a>";
     }
     else
