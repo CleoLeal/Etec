@@ -1,0 +1,42 @@
+Projeto: Triangulo
+Triangulo
+
++ lado1: double 
++ lado2: double
++ lado3: double
++ classificacao: String
++ perimetro: double
++ area: double
++ IsTriangle (): boolean
++ CalcularPerimetro(): void
++ Classificar():void
++ CalcularArea(): void
+Principal
+
++ main (args[] : String) : void
+
+Classe: Triangulo
+Métodos	Construtores: 
+Criar 03 construtores: 
+	Construtor default que não recebe parâmetros
+	Construtor que recebe todos os atributos como parâmetro
+	Construtor que recebe somente os lados como parâmetro
+	CalcularArea:..
+O cálculo da área de um triangulo através dos lados é obtido através da fórmula: onde sp = semi-perímetro (metade do perímetro). Math.sqrt(); //raiz quadrada
+√(sp*(sp-lado1)* (sp-lado2)*(sp-lado3) )
+	IsTriangle: Verifica se o comprimento de cada lado é menor que a soma dos outros 2 lados. Se sim, chamar o método classificar e o CalcularArea e retornar true, se não for retornar false
+	calcularPerimetro: calcula o perímetro.
+lado1 + lado2 + lado3
+	Classificar: Classificar o triângulo analisando os lados:
+	Triângulo equilátero – tem três lados iguais; 
+	Triângulo isósceles – tem o comprimento de dois lados iguais; 
+	Triângulo escaleno – tem os três lados diferentes.
+
+
+Classe: Principal
+Método	main: 
+	Instancia um objeto do tipo Triangulo utilizando o construtor default. Triangulo triangulo = new Triangulo();
+	Use triangulo.lado1=valor para informar os valores digitados pelo usuário. 
+	Se os lados não formarem um triângulo, exiba a mensagem ao usuário. “Valores inseridos não formam um triângulo”.
+	Se formar, mostre: Os lados, a classificação, o perímetro e a área.
+
