@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+      <! Página desenvolvidade em 30/09!>
+     <head>
+          <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+           <title> 4 Atividade Avaliativa </title>
+     </head>
+     <body bgcolor="#B0B5BF">
+         <form>
+             <table border="0" cellspacing="0" width="1300">
+                 <tr bgcolor="#768C54">
+                     <th><font size="6" color="#F2B705"><center>Companhia<br>Flores do Campo</center></font></th>
+                     <td><img src="flores01.jpg" height="250" width="800"></td>
+                     <th><font size="6" color="#F2B705"><center>Cadastro do Cliente</center></font></th>
+                 </tr>                
+             </table>
+<br> 
+              <fieldset><legend>Identificação do Cliente</legend>
+             <table width=1300>
+                 <tr>
+                    Nome:<input type="text" name="nome" size="40" placeholder="Digite o seu nome completo">&nbsp&nbsp&nbsp
+                    Telefone Residencial:<input type="text" name="telefoneR" size="20" placeholder="99 9999-9999">&nbsp&nbsp&nbsp
+                    Telefone Celular:<input type="text" name="telefoneC" size="20" placeholder="99 9999-9999">&nbsp&nbsp&nbsp
+                    Email:<input type="text" name="email" size="30" placeholder="Digite seu endereço de Email">
+<br>
+<br>
+                    Endereço:<input type="text" name="endereco" size="80">&nbsp&nbsp&nbsp
+                    CEP:<input type="text" name="cep" size="8">&nbsp&nbsp&nbsp
+                    Cidade:<input type="text" name="cidade" size="30">&nbsp&nbsp&nbsp
+                    Estado:<input type="text" name="estado" size="2">
+                 </tr>
+             </table>
+              </fieldset>
+<br> 
+              <fieldset><legend>Seu Pedido</legend>
+                <table border="1">
+                 <tr bgcolor="#F2B705">
+                     <td>
+                      &nbsp&nbspDigite a quantidade:<input type="text" name="quant" size="8">&nbsp&nbsp&nbsp
+<br>
+                      &nbsp&nbspEscolha abaixo:<br>
+                      <input type="radio" name="rd1" value="m">Unidade (R$10,00 cada)<br>
+                      <input type="radio" name="rd1" value="m">Dúzia (R$7,00)<br>
+                      <input type="radio" name="rd1" value="m">Centena (R$5,00)<br>
+<br>
+                     </td>
+                     <td>
+                      Escolha o tipo de flor: 
+                      <select name="flower" size="1">
+                        <opt>
+                         <option>Rosa</option>
+                         <option>Margarida</option>
+                         <option>Girassol</option>
+                         <option>Amor-perfeito</option>
+                         <option>Botão-de-Ouro</option>
+                         <option>Begônia</option>
+                         <option>Camélia</option>
+                         <option>Cinerária</option>
+                        </opt>
+                      </select>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<br>
+<br>
+                       Escolha a cor:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+                      <select name="color" size="1">
+                        <opt>
+                         <option>Vermelha</option>
+                         <option>Branca</option>
+                         <option>Amarela</option>
+                         <option>Laranja</option>
+                         <option>Azul</option>
+                         <option>Roxo</option>
+                         <option>Rosa</option>
+                        </opt>
+                      </select>
+<br>
+<br>
+                        Escolha o evento: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                      <select name="event" size="1">
+                        <opt>
+                          <option>Festa Comum</option>
+                          <option>Casamentos</option>
+                          <option>Funeral</option>
+                          <option>Formatura</option>
+                          <option>Pedido de Namoro</option>
+                          <option>Roxo</option>
+                          <option>Rosa</option>
+                        </opt>
+                      </select>
+<br>
+<br>
+                     </td>
+                     <td>
+                        Indique o(s) dia(s) para entrega:<br>
+                         <input type="checkbox" name="sup" value="Seg"> Segunda-Feira 
+<br>
+                         <input type="checkbox" name="sup" value="Ter"> Terça-Feira 
+<br>
+                         <input type="checkbox" name="sup" value="Qua"> Quarta-Feira
+<br>
+                         <input type="checkbox" name="sup" value="Qui"> Quinta-Feira
+<br>
+                         <input type="checkbox" name="sup" value="Sex"> Sexta-Feira
+                     </td>
+                     <td width="500">
+                        Observações: <br>
+                         <textarea name="texto" cols="70" rows="6" placeholder="Digite alguma particularidade do seu pedido"></textarea><br>
+                     </td>
+                 </tr>
+                </table>  
+                <table border="0"  width="1300">
+                 <tr>
+                    <td><img src="margarida.png" height="150" width="150"></td>
+                    <td>
+                        <buttontype="submit" name="fbotaoenviar" value="Enviar" accesskey="e"><u>E</u>nviarPedido</button>
+                       
+                    </td>
+                    <td>
+                        <buttontype="reset" name="fbotaolimpar" value="Limpar" accesskey="l"><u>L</u>impar Pedido</button>
+                    </td>
+                     <td><img align="right" src="margarida1.png" height="150" width="150" ></td>
+                 </tr>
+                 </tr>
+                </table> 
+              </fieldset>
+         </form>
+      
+     </body>
+</html>
