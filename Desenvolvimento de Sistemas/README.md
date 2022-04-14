@@ -1,0 +1,1 @@
+Exercício em C# com classes, atributos, métodos, construtores, herança, encapsulamento.
