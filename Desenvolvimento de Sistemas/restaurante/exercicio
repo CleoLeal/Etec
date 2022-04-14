@@ -1,0 +1,27 @@
+Projeto: Restaurante
+ 
+Classe: Comanda
+Métodos	lancarGastos: Lê e armazena nos respectivos atributos o valor consumido, o valor do estacionamento e o valor do couvert e inicializa os atributos valorDescontoPromocional e valorTotal com zero.
+	verificarPromocao: verifica se o valor consumido foi superior a R$100, se foi armazena 10% do valor consumido no atributo valorDescontoPromocional.
+	listarComanda: Apresenta o conteúdos de todos os atributos .
+	Atributos: Criar os atributos encapsulados (private) e criar os métodos de acesso
+	Construtores: Definir 3 construtores: 
+•	Um sem parâmetros 
+•	Um com parâmetros para inicializar todos os atributos
+•	E um terceiro recebendo somente um parâmetro para inicializar o atributo id
+
+
+Classe: Caixa
+Métodos	totalizarComanda: Recebe um parâmetro do tipo Comanda, soma os valores de consumo, estacionamento e couvert, subtrai o desconto promocional, armazena o total no atributo valorTotal e o retorna.
+
+
+Classe: Principal
+Método main	•	Instanciar um objeto do tipo Comanda chamado controleMesa.
+	•	Instanciar um objeto do tipo Caixa chamado caixa.
+	•	Apresentar um menu com as opções: 
+1 – Lançar gastos
+2 – Verificar promoção
+3 – Fechar mesa 
+4 – Listar comanda
+0 – Sair
+	Obs.: Inicializar o id da comanda pelo construtor
