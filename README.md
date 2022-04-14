@@ -1,0 +1,2 @@
+# etec
+ exerícios da etec
