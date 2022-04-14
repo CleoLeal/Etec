@@ -12,7 +12,7 @@ namespace viagem
         public string calcularViagem(Percurso p)
         {
             totalPercurso = p.getKmPercorrida() * p.getValorCombustivel() * p.getValorPedagio();
-            return p.listarPercurso() + "\nTotal Percurso= " + totalPercurso;
+            return p.listarPercurso() + "\nTotal do Percurso= " + totalPercurso;
         }
     }
 }

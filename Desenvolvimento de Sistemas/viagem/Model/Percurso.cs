@@ -14,7 +14,7 @@ namespace viagem
 
         public string listarPercurso()
         {
-            return "O quilômetro percorrido é " + kmPercorrida + "\nO valor do combustível é " + valorCombustivel + "\nO valor do pedágio é " + valorPedagio;
+            return "Quilômetro percorrido é " + kmPercorrida + "\nValor do combustível é " + valorCombustivel + "\nValor do pedágio é " + valorPedagio;
         }
         
         public Percurso()
