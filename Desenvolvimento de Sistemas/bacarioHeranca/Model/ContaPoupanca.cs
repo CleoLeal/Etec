@@ -10,25 +10,15 @@ namespace bancarioHeranca.Model
     {
         private double reajusteMensal;
 
-        //método calcular rendimento
-        public void calcularRendimento(double taxa)
+        
+        //get e set
+        public double getReajusteMensal()
         {
-            if(taxa > 0)
-            {
-                setReajusteMensal(getSaldo() * taxa);
-                atualizarSaldo();
-            }
+            return reajusteMensal;
         }
-
-        //método atualizar saldo
-        private void atualizarSaldo()
+        public void setReajusteMensal(double reajusteMensal)
         {
-            setSaldo(getSaldo() + getReajusteMensal());
-        }
-
-        public override string consultarSaldo()
-        {
-            return base.consultarSaldo() + "\nReajuste mensal: " + reajusteMensal;
+            this.reajusteMensal = reajusteMensal;
         }
 
         //dois construtores
@@ -41,15 +31,26 @@ namespace bancarioHeranca.Model
             this.reajusteMensal=reajusteMensal;
         }
 
-        //get e set
-        public double getReajusteMensal()
+        //método calcular rendimento
+        public void calcularRendimento(double taxa)
         {
-            return reajusteMensal;
-        }
-        public void setReajusteMensal(double reajusteMensal)
-        {
-            this.reajusteMensal = reajusteMensal;
+            if(taxa > 0 && getSaldo() > 0)
+            {
+                //o reajuste mensal é o saldo da pessoa vezes a taxa do banco
+                reajusteMensal = getSaldo() * taxa;
+                atualizarSaldo();
+            }
         }
 
+        //método atualizar saldo
+        private void atualizarSaldo()
+        {
+            setSaldo(getSaldo() + reajusteMensal);
+        }
+
+        public override string consultarSaldo()
+        {
+            return base.consultarSaldo() + "\nReajuste mensal: " + reajusteMensal;
+        }
     }
 }

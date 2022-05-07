@@ -11,8 +11,7 @@ namespace bancarioHeranca
     {
         static void Main(string[] args)
         {
-            Conta conta = new Conta();
-            ContaCorrente cc = new ContaCorrente();
+            ContaCorrente cc = new ContaCorrente(1000);
             ContaPoupanca cp = new ContaPoupanca();
 
             
@@ -53,11 +52,8 @@ namespace bancarioHeranca
                         else if (opcao == 3)
                         {
                             Console.WriteLine("Qual o número da sua para a transferência?");
-                            conta.setNumero(int.Parse(Console.ReadLine()));
-                            Console.WriteLine("Qual o valor da sua para a transferência?");
-                            double valor = double.Parse(Console.ReadLine());
-                            cc.transferir(valor, new ContaCorrente());
-                            Console.WriteLine("A transferência foi realizada!");
+                            valor = double.Parse(Console.ReadLine());
+                            cc.transferir(valor, cp);
                         }
                         else if (opcao == 4)
                         {
@@ -65,9 +61,7 @@ namespace bancarioHeranca
                         }
                         else if (opcao == 5)
                         {
-                            Console.WriteLine("Informe a sua taxa em %: ");
-                            double taxa = double.Parse(Console.ReadLine());
-                            cc.calcularJuros(taxa);
+                            cc.calcularJuros(0.10);
                         }
                         else
                         {
@@ -107,11 +101,8 @@ namespace bancarioHeranca
                         else if(opcao == 3)
                         {
                             Console.WriteLine("Qual o número da conta para a transferência?");
-                            conta.setNumero(int.Parse(Console.ReadLine()));
-                            Console.WriteLine("Qual o valor da sua para a transferência?");
-                            double valor = double.Parse(Console.ReadLine());
-                            cp.transferir(valor, new ContaCorrente());
-                            Console.WriteLine("A transferência foi realizada!");
+                            valor = double.Parse(Console.ReadLine());
+                            cp.transferir(valor, cc);
                         }
                         else if (opcao == 4)
                         {
@@ -119,10 +110,7 @@ namespace bancarioHeranca
                         }
                         else if (opcao == 5)
                         {
-                            Console.WriteLine("Qual é a sua taxa em %?");
-                            double taxa = double.Parse(Console.ReadLine());
-                            cp.calcularRendimento(taxa);
-                            Console.WriteLine("Calculado com sucesso!");
+                            cp.calcularRendimento(0.05);
                         }
                         else
                         {

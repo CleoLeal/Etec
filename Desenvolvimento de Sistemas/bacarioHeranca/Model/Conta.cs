@@ -11,61 +11,6 @@ namespace bancarioHeranca.Model
         private double saldo;
         private int numero;
 
-        //método depositar
-        public void depositar(double valor)
-        {
-            if (valor > 0)
-            {
-                setSaldo(getSaldo() + (valor));
-            }
-        }
-
-        public bool sacar(double valor)
-        {
-            if (getSaldo()>=valor && getSaldo()>0)
-            {
-                setSaldo(getSaldo() - (valor));
-                return true;
-            }            
-            return false;
-        }
-
-        public void transferir(double valor, Conta destino)
-        {
-            if (sacar(valor) && valor>0)
-            {
-                destino.depositar(valor);
-            }
-            else
-            {
-                Console.WriteLine("Poor");
-            }
-        }
-
-        public virtual string consultarSaldo()
-        {
-            return "Saldo da conta: " + getSaldo() + "\nNúmero da conta: "+ getNumero();
-        }
-
-        //três construtores
-        public Conta()
-        {
-            saldo = 0;
-            numero = 0;
-        }
-
-        public Conta(double Saldo, int Numero)
-        {
-            saldo = Saldo;
-            numero= Numero;
-        }
-
-        public Conta(int Numero)
-        {
-            saldo = 0;
-            numero = Numero;
-        }
-
         //get e set
         public double getSaldo()
         {
@@ -83,6 +28,59 @@ namespace bancarioHeranca.Model
         public void setNumero(int numero)
         {
             this.numero = numero;
+        }
+
+        //três construtores
+        public Conta()
+        {
+            this.saldo = 0;
+            this.numero = 0;
+        }
+
+        public Conta(double Saldo, int Numero)
+        {
+            this.saldo = Saldo;
+            this.numero= Numero;
+        }
+
+        public Conta(int Numero)
+        {
+            this.saldo = 0;
+            this.numero = Numero;
+        }
+        
+        //método depositar
+        public void depositar(double valor)
+        {
+            if (valor > 0)
+            {
+                //este valor soma  saldo=saldo+valor
+                this.saldo+=valor;
+            }
+        }
+
+        public bool sacar(double valor)
+        {
+            if (valor>0 && valor<=saldo)
+            {
+                 //este valor subtrai saldo=saldo+valor
+                saldo-=valor;
+                return true;
+            }            
+            return false;
+        }
+
+        public void transferir(double valor, Conta destino)
+        {
+            if (sacar(valor))
+            {
+                destino.depositar(valor);
+            }
+        }
+
+        public virtual string consultarSaldo()
+        {
+            return "Saldo da conta: " + saldo;
         }
     }
 }
