@@ -38,7 +38,7 @@ namespace ProjetoBancarioPolimorfismo
                         {
                             Console.WriteLine("Qual o valor que você quer sacar?");
                             double valor = double.Parse(Console.ReadLine());
-                            if (cc.debitar(valor))
+                            if (cc.debitar())
                             {
                                 Console.WriteLine("Você realizou o saque!");
                             }
@@ -46,6 +46,7 @@ namespace ProjetoBancarioPolimorfismo
                             {
                                 Console.WriteLine("O saque não foi realizado!");
                             }
+
                         }
                         else if (op == 3)
                         {
@@ -53,8 +54,8 @@ namespace ProjetoBancarioPolimorfismo
                         }
                         else if (op == 4)
                         {
-                            Console.WriteLine("O saldo foi atualizado");
                             cc.atualizarSaldos();
+                            Console.WriteLine("Saldo atualizado!");
                         }
                         else
                         {
@@ -97,7 +98,8 @@ namespace ProjetoBancarioPolimorfismo
                         }
                         else if (op == 4)
                         {
-                            cp.atualizarSaldos();
+                            cc.atualizarSaldos();
+                            Console.WriteLine("Saldo atualizado!");
                         }
                         else
                         {
@@ -120,7 +122,7 @@ namespace ProjetoBancarioPolimorfismo
                     Environment.Exit(0);    
                 }
                 Console.ReadKey();
-            } while (op != 0);
+            } while (opcao != 0);
         }
     }
 }
