@@ -42,14 +42,12 @@ namespace ProjetoBancarioPolimorfismo
             }
         }
 
-        public bool debitar(double valor)
+        public override void debitar(double valor)
         {
             if(getSaldo() + getLimiteEspecial()>valor)
             {
                 setSaldo(getSaldo()-valor);
-                return true;
             }
-            return false;   
         }
     }
 }
