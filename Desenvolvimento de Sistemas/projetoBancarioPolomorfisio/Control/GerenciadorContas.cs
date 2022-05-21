@@ -8,10 +8,10 @@ namespace ProjetoBancarioPolimorfismo
 {
     class GerenciadorContas
     {
+        //atributo 
         private double saldoTotal;
 
         //get e set
-
         public double getSaldoTotal()
         {
             return saldoTotal;
