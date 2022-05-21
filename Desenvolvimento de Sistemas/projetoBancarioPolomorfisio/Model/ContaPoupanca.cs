@@ -8,6 +8,7 @@ namespace ProjetoBancarioPolimorfismo
 {
     class ContaPoupanca : Conta
     {
+        //atributos
         private double reajusteMensal;
 
         //get e set
@@ -35,12 +36,19 @@ namespace ProjetoBancarioPolimorfismo
 
         public override void atualizarSaldos()
         {
-            Console.WriteLine("O seu saldo é: " + getSaldo());
+            throw new NotImplementedException();
         }
 
-        public void atualizarSaldos(double reajuste)
+        public string atualizarSaldos(double reajuste)
         {
-            setReajusteMensal((getReajusteMensal() * getSaldo()) + getSaldo());
+            if(getSaldo() > 0)
+            {
+                reajusteMensal = (getSaldo() * reajuste) / 100;
+                setSaldo(getSaldo() + reajusteMensal);
+                return "Saldo atual: " + getSaldo();
+            }
+            return "Saldo atual: " + getSaldo();
+            
         }
     }
 }
