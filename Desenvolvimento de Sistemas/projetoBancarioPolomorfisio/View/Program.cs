@@ -12,7 +12,7 @@ namespace ProjetoBancarioPolimorfismo
         {
             ContaCorrente cc = new ContaCorrente(500, 1000);
             ContaPoupanca cp = new ContaPoupanca(5000, 0.01);
-            GerenciadorContas saldoTotal = new GerenciadorContas(0);
+            GerenciadorContas saldoTotal = new GerenciadorContas();
 
             int opcao = 0;
             int op = 0;
@@ -31,22 +31,22 @@ namespace ProjetoBancarioPolimorfismo
                         {
                             Console.WriteLine("Qual o valor que você quer depositar?");
                             double valor = double.Parse(Console.ReadLine());
-                            cc.creditar(valor);
-                            Console.WriteLine("Sucesso!");
+                            if(valor > 0)
+                            {
+                                cc.creditar(valor);
+                                Console.WriteLine("Sucesso!");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Não foi um  sucesso :(");
+                            }
+                            
                         }
                         else if (op == 2)
                         {
                             Console.WriteLine("Qual o valor que você quer sacar?");
                             double valor = double.Parse(Console.ReadLine());
-                            if (cc.debitar())
-                            {
-                                Console.WriteLine("Você realizou o saque!");
-                            }
-                            else
-                            {
-                                Console.WriteLine("O saque não foi realizado!");
-                            }
-
+                            cc.debitar(valor);
                         }
                         else if (op == 3)
                         {
@@ -81,15 +81,16 @@ namespace ProjetoBancarioPolimorfismo
                         }
                         else if (op == 2)
                         {
-                            Console.WriteLine("Qual o valor que você quer sacar?");
+                            Console.WriteLine("Qual o valor que você quer depositar?");
                             double valor = double.Parse(Console.ReadLine());
-                            if (cp.debitar(valor))
+                            if (valor > 0)
                             {
-                                Console.WriteLine("Você realizou o saque!");
+                                cp.creditar(valor);
+                                Console.WriteLine("Sucesso!");
                             }
                             else
                             {
-                                Console.WriteLine("O saque não foi realizado!");
+                                Console.WriteLine("Não foi um  sucesso :(");
                             }
                         }
                         else if (op == 3)
@@ -98,7 +99,7 @@ namespace ProjetoBancarioPolimorfismo
                         }
                         else if (op == 4)
                         {
-                            cc.atualizarSaldos();
+                            cp.atualizarSaldos();
                             Console.WriteLine("Saldo atualizado!");
                         }
                         else
