@@ -8,6 +8,7 @@ namespace ProjetoBancarioPolimorfismo
 {
     class ContaCorrente:Conta
     {
+        //atributo
         private double limiteEspecial;
 
         //get e set
@@ -20,7 +21,7 @@ namespace ProjetoBancarioPolimorfismo
             this.limiteEspecial = limiteEsepecial;
         }
 
-        // 2 contrutores
+        // 3 contrutores
         public ContaCorrente()
         {
             limiteEspecial = 0;
@@ -31,23 +32,36 @@ namespace ProjetoBancarioPolimorfismo
             this.limiteEspecial = limiteEspecial;
             setSaldo(saldo);
         }
+        public ContaCorrente(double limiteEspecial)
+        {
+            this.limiteEspecial=limiteEspecial;
+        }
 
         //métodos
+
+        /*como na classe Conta existe um método abstract
+        e a gente faz uma herança com a ContaCorrente:Conta
+        precisa ter o atualizarSaldos() da Conta.*/
         public override void atualizarSaldos()
         {
-            if(getSaldo()<0)
+            if (getSaldo() < 0)
             {
-                setSaldo(getSaldo() * 1.08);
+                setSaldo(getSaldo() + getSaldo() * 0.08);
                 Console.WriteLine("O seu saldo é: " + getSaldo());
             }
         }
 
-        public override void debitar(double valor)
+        /*override siginifica estar sobrescrevendo
+        o método debitar da superClasse*/
+        public override string debitar(double valor)
         {
-            if(getSaldo() + getLimiteEspecial()>valor)
+            if(valor <= getSaldo() + limiteEspecial)
             {
                 setSaldo(getSaldo()-valor);
+                return "Débito efetuado com sucesso";
             }
+            return "Saldo insuficiente";
         }
+
     }
 }
