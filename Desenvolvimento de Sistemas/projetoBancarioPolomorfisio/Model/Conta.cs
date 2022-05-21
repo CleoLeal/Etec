@@ -10,9 +10,6 @@ namespace ProjetoBancarioPolimorfismo
     {
         private double saldo;
 
-        //método abstrato
-        public abstract void atualizarSaldos();
-
         //get e set
 
         public double getSaldo()
@@ -31,14 +28,19 @@ namespace ProjetoBancarioPolimorfismo
             saldo += valor;
         }
 
-        public virtual bool debitar (double valor)
+        /* O virtual significa que eu (eu como conta) permita 
+         que as minhas subclasses sobrescrevam esse método */
+        public virtual string debitar (double valor)
         {
-            if(valor<=saldo)
+            if(saldo >= valor)
             {
                 saldo -= valor;
-                return true;
+                return "Débito efetuado com sucesso";
             }
-            return false;
+            return "Saldo insuficiente";
         }
+
+        //método abstract
+        public abstract void atualizarSaldos();
     }
 }
