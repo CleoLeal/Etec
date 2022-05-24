@@ -16,8 +16,8 @@ namespace exercicio09
             int n = 0;
             do
             {
-                Console.WriteLine(n);
                 n = n + 7;
+                Console.WriteLine(n);
             } while (n <= 1500);
             Console.ReadKey();
         }
