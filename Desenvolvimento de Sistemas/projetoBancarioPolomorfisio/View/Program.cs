@@ -55,15 +55,15 @@ namespace ProjetoBancarioPolimorfismo
                         else if (op == 4)
                         {
                             cc.atualizarSaldos();
-                            Console.WriteLine("Saldo atualizado!");
+                            Console.Write("Saldo atualizado!");
                         }
                         else
                         {
                             break;
                         }
+                        Console.ReadKey();
                     }
                     while (op != 0);
-                    Console.ReadKey();
                 }
                 else if (opcao == 2)
                 {
@@ -101,6 +101,7 @@ namespace ProjetoBancarioPolimorfismo
                         {
                             cp.atualizarSaldos();
                             Console.WriteLine("Saldo atualizado!");
+
                         }
                         else
                         {
