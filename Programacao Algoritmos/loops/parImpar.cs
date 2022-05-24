@@ -35,14 +35,14 @@ namespace parImpar
                     Console.WriteLine("Computador- " + computador + "pts");
                     Console.WriteLine("Jogador- " + jogador + "pts");
                 }
-                else if (escolha == '1' && n1 % 2 == 0)
+                else if (escolha == 1 && n1 % 2 == 0)
                 {
                     computador++;
                     Console.WriteLine("O número sorteado " + n1 + " é par!\r\nErrou!");
                     Console.WriteLine("Computador- " + computador + "pts");
                     Console.WriteLine("Jogador- " + jogador + "pts");
                 }
-                else if (escolha == '1' && n1 % 2 != 0)
+                else if (escolha == 1 && n1 % 2 != 0)
                 {
                     jogador++;
                     Console.WriteLine("O número sorteado " + n1 + " é ímpar!\r\nParabéns!");
@@ -50,7 +50,7 @@ namespace parImpar
                     Console.WriteLine("Jogador- " + jogador + "pts");
 
                 }
-                else if (escolha == '2' && n1 % 2 != 0)
+                else if (escolha == 2 && n1 % 2 != 0)
                 {
                     computador++;
                     Console.WriteLine("O número sorteado " + n1 + " é ímpar!\r\nErrou!");
