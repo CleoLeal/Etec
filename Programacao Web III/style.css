@@ -1,8 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 .botao{
-    color: black;
-    background-color: white;
-    font-size: 20px;
-    font-family: 'Verdana';
-    width: 80px;
-    height: 30px;
+        color: black;
+        background-color: white;
+        font-size: 20px;
+        width: 80px;
+        height: 30px;
+        font-family: "oswald";
   }
+
+.input Input {
+        position: relative;
+        width: 250px;
+        height: 100%;
+        left: 0%;
+        border-radius: 15px;
+        border-color: tomato;
+        font-family: "verdana";
+          }
+
+.font{
+        font-size: medium;
+        font-family: "oswald";
+     }
